@@ -1,0 +1,98 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.contactBanner {
+  background-image: url(../../IMG/aaec3d71-group-62.png);
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $clr--dark;
+  @include centerAll;
+  position: relative;
+
+  &__wrapper {
+    h1 {
+      font-family: $font--primary;
+      padding-bottom: 1rem;
+      font-size: 5rem;
+    }
+    p {
+      padding-bottom: 2rem;
+      font-family: $font--secondary;
+    }
+    img {
+      position: absolute;
+      max-width: 20%;
+      margin-left: 35rem;
+      
+    }
+  }
+  .image{
+    img{
+        position: absolute;
+        margin-left: -60rem;
+    }
+}
+
+  
+}
+
+.contact{
+
+    &__wrapper{
+        @include unevenGrid(1fr 2fr, 2);
+        place-content: center;
+    }
+    &__table{
+        padding: 5rem;
+        width: 60rem;
+        height: 45rem;
+        place-content: center;
+        justify-content: center;
+
+        h2{
+            font-size: 2rem;
+            color: $clr--dark;
+        }
+        p{
+            color: $clr--dark;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            gap: 1rem;
+        }
+        input{
+           height:4rem;
+            width: 100%;
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.178);
+        }
+        textarea{
+            @extend input;
+            height: 6rem;
+        }
+
+        input::placeholder{
+            font-family: $font--secondary;
+        }
+    }
+    &__name{
+        @include between;
+        gap: 1rem;
+    }
+    &__image{
+        max-width: 50rem;
+        height: 30rem;
+    }
+    &__button{
+        margin-left: 2rem;
+    }
+    &__map{
+        iframe{
+             padding-top: 2rem;
+              place-content: center;
+        }
+    }
+}

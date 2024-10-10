@@ -1,0 +1,106 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+// BLOG BANNER
+
+.blogBanner {
+  background-image: url(../../IMG/aaec3d71-group-62.png);
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $clr--dark;
+  @include centerAll;
+  position: relative;
+
+  &__wrapper {
+    h1 {
+      font-family: $font--primary;
+      padding-bottom: 1rem;
+      font-size: 5rem;
+    }
+    p {
+      padding-bottom: 2rem;
+      font-family: $font--secondary;
+    }
+    img {
+      position: absolute;
+      max-width: 20%;
+      margin-left: 25rem;
+      
+    }
+  }
+  .image{
+    img{
+        position: absolute;
+        margin-left: -60rem;
+    }
+}
+
+  
+}
+
+
+// BLOG POPULAR
+
+.blogPopular {
+  &__wrapper {
+    @include evenGrid(2, 2rem);
+  }
+
+  &__title {
+    text-align: center;
+
+    h2 {
+      color: $clr--dark;
+      font-size: 4rem;
+      padding-bottom: 2rem;
+    }
+    p {
+      color: $clr--dark;
+      padding-bottom: 3rem;
+      font-family: $font--secondary;
+    }
+  }
+
+  &__left--cards {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    img {
+      max-width: 15rem;
+      height: 10rem;
+    }
+  }
+  &__left--details {
+    li {
+      padding-bottom: 1rem;
+      a {
+        color: purple;
+        font-family: $font--secondary;
+      }
+    }
+    h3 {
+      color: $clr--dark;
+    }
+    p {
+      color: $clr--dark;
+      padding-top: 1rem;
+      text-align: justify;
+      padding-bottom: 1rem;
+      font-family: $font--secondary;
+    }
+    a{
+      color: $clr--dark;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font--secondary;
+    }
+    small{
+        opacity: 0.8;
+        font-family: $font--secondary;
+    }
+  }
+}
+

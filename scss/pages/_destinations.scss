@@ -1,0 +1,75 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+
+// DESTINATIONS BANNER
+
+.aboutBanner {
+  background-image: url(../../IMG/aaec3d71-group-62.png);
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $clr--dark;
+  @include centerAll;
+  position: relative;
+
+  &__wrapper {
+    h1 {
+      font-family: $font--primary;
+      padding-bottom: 1rem;
+      font-size: 5rem;
+    }
+    p {
+      padding-bottom: 2rem;
+      font-family: $font--secondary;
+    }
+    img {
+      position: absolute;
+      max-width: 20%;
+      margin-left: 30rem;
+      
+    }
+  }
+  .image{
+    img{
+        position: absolute;
+        margin-left: -65rem;
+    }
+}
+ 
+}
+
+// DESTINATIONS CATALOG
+.destinationsCatalog{
+  &__wrapper{
+    padding: 3rem;
+  }
+  
+  &__image{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    img{
+      max-width: 20rem;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    padding-bottom: 3rem;
+    h2{
+      font-size: 3rem;
+      color: $clr--dark;
+      padding-bottom: 1rem;
+      
+    }
+    small{
+      opacity: 0.6;
+      font-family: $font--secondary;
+      
+    }
+  }
+
+}
+

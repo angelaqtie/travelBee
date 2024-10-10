@@ -1,0 +1,380 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+// ABOUT BANNER
+
+.aboutBanner {
+  background-image: url(../../IMG/aaec3d71-group-62.png);
+  background-size: 100%;
+  width: 100vw;
+  height: 100vh;
+  background-color: $clr--dark;
+  @include centerAll;
+  position: relative;
+
+  &__wrapper {
+    h1 {
+      font-family: $font--primary;
+      padding-bottom: 1rem;
+      font-size: 5rem;
+    }
+    p {
+      padding-bottom: 2rem;
+      font-family: $font--secondary;
+      font-size: 1rem;
+      font-weight: 50;
+    }
+    img {
+      position: absolute;
+      max-width: 20%;
+      margin-left: 20rem;
+      
+    }
+  }
+  .image{
+    img{
+        position: absolute;
+        margin-left: -65rem;
+    }
+}
+
+  
+}
+
+
+// ABOUT
+
+.about {
+
+  &__title{
+    padding-top: 4rem;
+    h2{
+      font-size: 3rem;
+      color: $clr--dark;
+      padding-bottom: 5rem;
+    }
+  }
+
+  &__wrapper{
+    @include evenGrid(2, 2rem);
+    
+  
+  }
+
+  &__cards--image {
+    position: relative;
+  }
+
+  &__img1 {
+    max-width: 25rem;
+    img {
+      border-top-right-radius: 10rem;
+      border-top-left-radius: 10rem;
+    }
+  }
+  &__img2 {
+    max-width: 20rem;
+    position: absolute;
+    margin-top: -15rem;
+    left: 28rem;
+
+    img {
+      border-radius: 15rem;
+      border: 10px solid $clr--light;
+    }
+  }
+
+  &__details{
+    padding: 1rem;
+    margin-top: 3rem;
+
+    p{
+      color: $clr--dark;
+      padding-bottom: 2rem;
+      font-family: $font--secondary;
+    }
+    h2{
+        font-size: 2rem;
+        font-family: $font--secondary;
+        padding-bottom: 1rem;
+    }
+    h4{
+        color: $clr--dark;
+        padding-bottom: 5rem;
+        font-family: $font--secondary;
+        font-weight: 0;
+    }
+    
+  }
+}
+
+// ABOUT POPULAR
+
+.aboutPopular {
+  &__wrapper {
+    @include evenGrid(2, 2rem);
+  }
+
+  &__title {
+    text-align: center;
+
+    h2 {
+      color: $clr--dark;
+      font-size: 4rem;
+      padding-bottom: 2rem;
+    }
+    p {
+      color: $clr--dark;
+      padding-bottom: 3rem;
+      font-family: $font--secondary;
+    }
+  }
+
+  &__left--cards {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+
+    img {
+      max-width: 15rem;
+      height: 10rem;
+    }
+  }
+  &__left--details {
+    li {
+      padding-bottom: 1rem;
+      a {
+        color: purple;
+        font-family: $font--secondary;
+      }
+    }
+    h3 {
+      color: $clr--dark;
+    }
+    p {
+      color: $clr--dark;
+      padding-top: 1rem;
+      text-align: justify;
+      padding-bottom: 1rem;
+      font-family: $font--secondary;
+    }
+    a{
+      color: $clr--dark;
+      font-size: 1rem;
+      font-weight: 700;
+      font-family: $font--secondary;
+    }
+    small{
+        font-family: $font--secondary;
+        opacity: 0.8;
+    }
+  }
+}
+
+// ABOUT CATALOG
+
+.aboutCatalog{
+  &__wrapper{
+    padding: 3rem;
+  }
+  
+  &__image{
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 3rem;
+    img{
+      max-width: 20rem;
+    }
+  }
+
+  &__title{
+    text-align: center;
+    padding-bottom: 3rem;
+    h2{
+      font-size: 3rem;
+      color: $clr--dark;
+      padding-bottom: 1rem;
+      
+    }
+    small{
+      opacity: 0.6;
+      font-family: $font--secondary;
+      
+    }
+  }
+
+
+
+}
+
+// ABOUT BLOG
+
+
+.aboutBlog{
+  
+  &__cards{
+    @include unevenGrid(50rem 30rem, 3rem);
+    .cardsA{
+      position: relative;
+      img{
+        max-width: 50rem;
+        height: 30rem;
+        
+      }
+      li{
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.178);
+
+        small{
+          background-color: transparent;
+          color: $clr--dark;
+          top: 0;
+          font-family: $font--secondary;
+        }
+      }
+      
+      
+      
+    
+    }
+    .details{
+      h3{
+        color: $clr--dark;
+        font-size: 2rem;
+      }
+      p{
+        color: $clr--dark;
+        font-size: 1rem;
+        font-family: $font--secondary;
+      }
+    }
+    .cardsB{
+       position: relative;
+      img{
+        max-width: 60rem;
+        height: 30rem;
+        
+      }
+      
+      
+    }
+    .details{
+      h3{
+        color: $clr--dark;
+        font-size: 2rem;
+        padding-top: 2rem;
+         padding-bottom: 2rem;
+      }
+      p{
+        color: $clr--dark;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        font-family: $font--secondary;
+      }
+    }
+  }
+
+  &__button{
+    position: absolute;
+    max-width: 5rem;
+    left: 44rem;
+    margin-top: 1rem;
+
+    a{
+        background-color: $clr--primary;
+        color: $clr--light;
+        padding: 10px;
+        border-radius: 2rem;
+        margin-bottom: 1.5rem;
+        font-family: $font--secondary;
+        &:hover{
+      background-color: $clr--light;
+      color: $clr--primary;
+    }
+      }
+      i{
+      background-color: $clr--light;
+      padding: 1rem;
+      margin-top: 9px;
+      margin-left: 23px;
+
+      
+      
+      }
+  }
+  &__button2{
+    position: absolute;
+    max-width: 15rem;
+    left: 15rem;
+    margin-top: 1rem;
+
+    a{
+        background-color: $clr--primary;
+        color: $clr--light;
+        padding: 10px;
+        border-radius: 2rem;
+        margin-bottom: 1.5rem;
+        font-family: $font--secondary;
+        &:hover{
+      background-color: $clr--light;
+      color: $clr--primary;
+    }
+      }
+      
+  }
+
+
+
+  &__cards--right{
+    .cardsC{
+      display: flex;
+      gap: 1rem;
+      padding-bottom: 2rem;
+
+      img{
+        max-width: 10rem;
+        max-height: 10rem;
+      }
+      .details{
+        li{
+          a{
+            color: purple;
+            font-family: $font--secondary;
+            
+          }
+        }
+        h3{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+        }
+    small{
+        font-family: $font--secondary;
+        opacity: 0.8;
+    }    
+      
+    }
+
+    }
+  }
+
+  &__search{
+    padding: 1rem;
+    
+    input{
+      width: 25rem;
+      height: 3rem;
+       border: 1px solid rgba(0, 0, 0, 0.1);
+       
+    }
+
+    i{
+      background-color: $clr--dark;
+      color: $clr--light;
+      padding: 1rem;
+     
+    }
+
+
+  }
+}

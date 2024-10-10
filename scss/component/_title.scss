@@ -1,0 +1,9 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.title {
+  flex-direction: column;
+  margin-bottom: 2rem;
+
+}
+

@@ -1,0 +1,40 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+
+.header{
+    display: block;
+    width: 100%;
+    padding: 2rem 0;
+    background-color: $clr--dark;
+
+    &__wrapper{
+        @include between;
+    }
+    &__nav{
+        display: flex;
+        gap: 2rem;
+        
+        li a{
+            color: $clr--light;
+
+            &:hover{
+            color: $clr--primary;
+        }
+        }
+
+        
+    }
+    &__nav2{
+        display: flex;
+        gap: 2rem;
+        li a{
+            color: $clr--light;
+            
+            &:hover{
+            color: $clr--primary;
+            
+        }
+        }
+    }
+}

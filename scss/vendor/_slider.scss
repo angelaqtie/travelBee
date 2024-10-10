@@ -1,0 +1,40 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.footer .tns-outer {
+  overflow: hidden;
+  width: 125rem;
+
+  & > button {
+    display: none;
+  }
+}
+
+.tns-nav {
+  button {
+    display: none;
+  }
+}
+
+#controls {
+  position: absolute;
+}
+
+.prev {
+  color: $clr--light;
+  font-size: 2rem;
+  position: relative;
+   bottom: 9rem;
+
+   &:hover{
+    color: $clr--dark;
+  }
+  
+ 
+}
+.next {
+  @extend .prev;
+  position: relative;
+  left: 116rem;
+ 
+}

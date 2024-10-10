@@ -1,0 +1,94 @@
+@use "../abstract/" as *;
+@use "../base/" as *;
+
+.footer {
+  &__navigation {
+    @include between;
+    padding: 5rem 0;
+  }
+  &__wrapper {
+    max-width: 100rem;
+  }
+
+  &__images1--slider {
+    @include evenGrid(6, 1fr);
+    display: flex;
+    img {
+      height: 15rem;
+      justify-content: center;
+    }
+  }
+
+  &__title {
+    padding: 5rem;
+    @include centerAll;
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+      font-size: 3rem;
+      color: $clr--dark;
+    }
+    small {
+      font-family: $font--secondary;
+
+      i {
+        &:hover {
+          color: $clr--primary;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    li a {
+      color: $clr--dark;
+
+      &:hover {
+        color: $clr--primary;
+      }
+    }
+  }
+
+  &__nav2 {
+    display: flex;
+    gap: 2rem;
+
+    li a {
+      color: $clr--dark;
+
+      &:hover {
+        color: $clr--primary;
+      }
+    }
+  }
+
+  &__socials {
+    @include between;
+    gap: 4rem;
+    margin-bottom: 1rem;
+
+    h4 {
+      color: $clr--dark;
+      font-family: $font--secondary;
+    }
+
+    .icon {
+      color: $clr--dark;
+
+      ul i {
+        gap: 5rem;
+        border: 1px solid rgba(0, 0, 0, 0.178);
+        padding: 1rem;
+        font-size: 2rem;
+
+        &:hover {
+          color: $clr--primary;
+        }
+      }
+    }
+  }
+}
